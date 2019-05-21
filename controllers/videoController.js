@@ -6,6 +6,7 @@ export const search = (req, res) => {
   console.log(searchingBy)
   res.render('search', { pageTitle: 'Search', searchingBy: searchingBy })
 }
+
 export const upload = (req, res) => res.render('upload', { pageTitle: 'Upload' })
 
 export const videoDetail = (req, res) => res.render('videoDetail', { pageTitle: 'Video Detail' })
