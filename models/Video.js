@@ -17,7 +17,12 @@ const VideoSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
+  },
+  // video에 comments 의 id 를 array로 저장하여 어떤 comment들이 들어있는지 알 수 있음
+  comments: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Comment'
+  }]
 })
 
 const model = mongoose.model('Video', VideoSchema)
