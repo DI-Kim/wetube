@@ -1,13 +1,13 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const VideoSchema = new mongoose.Schema({
   fileUrl: {
     type: String,
-    required: 'File URL is required'
+    required: "File URL is required"
   },
   title: {
     type: String,
-    required: 'Title URL is required'
+    required: "Title URL is required"
   },
   description: String,
   views: {
@@ -19,11 +19,13 @@ const VideoSchema = new mongoose.Schema({
     default: Date.now
   },
   // video에 comments 의 id 를 array로 저장하여 어떤 comment들이 들어있는지 알 수 있음
-  comments: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Comment'
-  }]
-})
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment"
+    }
+  ]
+});
 
-const model = mongoose.model('Video', VideoSchema)
-export default model
+const model = mongoose.model("Video", VideoSchema);
+export default model;
