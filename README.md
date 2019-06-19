@@ -14,4 +14,5 @@ Cloning Youtube with Vanilla and NodeJS
 - [x] Upload
 - [x] Video Detail
 - [x] Edit Video
-- [ ] Create comment delete btn
+- [ ] Create comment delete button
+- [ ] Create comment modify button
